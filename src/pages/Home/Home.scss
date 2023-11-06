@@ -1,0 +1,31 @@
+@use '../../styles/partials/font' as *;
+@use '../../styles/partials/mixin' as *;
+@use '../../styles/partials/variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    @include tablet {
+        width: 768px;
+        margin: 0 auto;
+    }
+    @include desktop {
+        width: 1280px;
+        display: flex;
+    }
+    &__content {
+        @include desktop {
+            flex: 1;
+            border-right: 1px solid #E1E1E1;
+        }
+    }
+    &__sidebar {
+        @include desktop {
+            width: 20rem;
+            padding: 1rem;
+            margin-right: 3.5rem;
+        }
+    }
+}

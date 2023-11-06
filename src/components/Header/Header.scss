@@ -1,0 +1,108 @@
+@use '../../styles/partials/font' as *;
+@use '../../styles/partials/mixin' as *;
+@use '../../styles/partials/variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #E1E1E1;
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    @include desktop {
+        justify-content: space-evenly;
+    }
+    &__logo {
+        margin: 1rem;
+        @include tablet {
+            margin-right: 5rem;
+            margin-left: 4rem;
+        }
+        @include desktop {
+            margin-right: 15rem;
+        }
+    }
+    &__search {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        @include tablet {
+            justify-content: flex-end;
+            margin-right: 2rem;
+        }
+    }
+    &__search-box {
+        background-image: url('../../assets/icons/search.svg');
+        background-repeat: no-repeat;
+        background-position: 2px;
+        border: 1px solid #E1E1E1;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        width: 65%;
+        @include tablet {
+            padding: 0.8rem 1rem;
+            width: 200px;
+        }
+        &::placeholder {
+            padding-left: 1.5rem;
+        }
+    }
+    &__upload {
+        background-color: #0095FF;
+        color: #ffffff;
+        display: flex;
+        margin: 1rem 0;
+        padding: 0 1rem;
+        width: 75%;
+        justify-content: flex-start;
+        border-radius: 4px;
+        text-decoration: none;
+        @include tablet {
+            width: 150px;
+        }
+    }
+    &__upload-text {
+        padding-left: 6rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-family: "AvenirNext LT Pro";
+        font-weight: 700;
+        align-items: center;
+        @include tablet {
+            padding: 0.8rem;
+            padding-right: 2rem;
+        }
+    }
+    &__search-image {
+        display: flex;
+        position: relative;
+    }
+    &__profile-mobile {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        object-fit: cover;
+        @include tablet{
+            display: none;
+        }
+    }
+    &__profile-tablet {
+        display: none;
+        @include tablet {
+            display: flex;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 2rem;
+            margin-left: 2rem;
+        }
+    }
+}

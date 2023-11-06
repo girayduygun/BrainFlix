@@ -1,0 +1,187 @@
+@use '../../styles/partials/font' as *;
+@use '../../styles/partials/mixin' as *;
+@use '../../styles/partials/variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.upload-container {
+        margin: 0;
+        font-family: "AvenirNext LT Pro";
+        padding: 1rem;
+    @include desktop {
+        padding: 1rem;
+        width: 1280px;
+        margin: 0 auto;
+    }
+    &__title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        padding: 0.5rem 0;
+        @include tablet {
+            font-size: 2.0625rem;
+            line-height: 2.75rem;
+            border-bottom: 1px solid #E1E1E1;
+        }
+    }
+    &__text {
+        padding: 1rem 0 0 0;
+        color: #AFAFAF;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+    }
+    &__form {
+        display: block;
+    }
+    &__submit {
+        @include desktop {
+            display: flex;
+            padding-bottom: 2rem;
+        }
+    }
+    &__add {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        @include desktop {
+            width: 100%;
+        }
+    }
+    input {
+        height: 2.5rem;
+        box-sizing: border-box;
+        padding: 0 1rem;
+        border: 1px solid #AFAFAF;
+        border-radius: 4px;
+        width: 100%;
+        font-family: "AvenirNext LT Pro";
+        &::placeholder {
+            color: #000000;
+        }
+    }
+    textarea {
+        height: 7rem;
+        box-sizing: border-box;
+        padding: 1rem;
+        border: 1px solid #AFAFAF;
+        border-radius: 4px;
+        width: 100%;
+        font-family: "AvenirNext LT Pro";
+        &::placeholder {
+            color: #000000;
+        }
+    }
+    &__success {
+        background: #0095FF;
+        padding: 1rem;
+        color: #FFFFFF;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+    }
+    &__thumbnail {
+        display: flex;
+        flex-direction: column;
+    }
+    &__thumbnail-text {
+        color: #AFAFAF;
+        margin-bottom: 1rem;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        @include tablet {
+            padding-top: 2rem;
+        }
+    }
+    &__thumbnail-image {
+        background: #AFAFAF;
+        border-radius: 4px;
+        width: 100%;
+        @include tablet {
+            width: 50%;
+        }
+        @include desktop {
+            width: 70%;
+        }
+    }
+    &__button {
+        @include tablet {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        @include desktop {
+            border-top: 1px solid #E1E1E1;
+        }
+    }
+    &__button-publish {
+        height: 2.5rem;
+        width: 100%;
+        border: none;
+        font-size: 0.625rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        padding: 0 1rem 0 1rem;
+        margin: 1rem 0;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background-color: #0095FF;
+        color: #FFFFFF;
+        cursor: pointer;
+        background-image: url('../../assets/icons/publish.svg');
+        background-repeat: no-repeat;
+        background-position: 2px;
+        &:hover {
+            background-color: #0065AD;
+        }
+        @include tablet {
+            font-size: 0.75rem;
+            width: 10rem;
+        }
+    }
+    &__button-cancelMobile {
+        height: 2.5rem;
+        width: 100%;
+        border: none;
+        font-size: 0.625rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        padding: 0 1.5rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background-color: #FFFFFF;
+        color: #0095FF;
+        cursor: pointer;
+        @include tablet {
+            display: none;
+        }
+    }
+    &__button-cancelTablet {
+        display: none;
+        @include tablet {
+            height: 2.5rem;
+            width: 10rem;
+            border: none;
+            font-size: 0.75rem;
+            line-height: 1.25rem;
+            font-weight: 700;
+            padding: 0 1.5rem;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background-color: #FFFFFF;
+            color: #0095FF;
+            cursor: pointer;
+        }
+    }
+}

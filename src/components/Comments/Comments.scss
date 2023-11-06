@@ -1,0 +1,73 @@
+@use '../../styles/partials/font' as *;
+@use '../../styles/partials/mixin' as *;
+@use '../../styles/partials/variables' as *;
+
+
+.comments {
+    font-family: "AvenirNext LT Pro";
+    padding: 1rem;
+    @include desktop {
+        padding-left: 6rem;
+        padding-right: 0;
+        padding-top: 0;
+    }
+    &__title {
+        margin-bottom: 0.5rem;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        @include tablet {
+            padding: 0.5rem 0;
+        }
+    }
+}
+.comments__list {
+    gap: 1rem;
+}
+.commments__list-comment {
+    display: flex;
+    gap: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #E1E1E1;
+    padding-top: 1rem;
+}
+.commments__list-comment-name {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 700;
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+}
+.commments__list-comment-content {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+}
+.commments__list-comment-date {
+    color: #AFAFAF;
+}
+.commments__list-comment-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #E1E1E1;
+        flex-shrink: 0;
+        @include tablet {
+            width: 40px;
+            height: 40px;
+            margin-left: 0;
+        }
+}
+.commments__list-comment-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
